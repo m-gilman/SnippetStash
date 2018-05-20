@@ -1,0 +1,26 @@
+{
+  "name": "snippetstash",
+  "version": "1.0.0",
+  "description": "full stack app for stashing code snippets",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "fullstack",
+    "javascript",
+    "node.js",
+    "api",
+    "bootstrap"
+  ],
+  "author": "pixelpushers ptsd",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.37.7"
+  }
+}
