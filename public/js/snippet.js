@@ -1,16 +1,16 @@
 $(document).ready(function() {
     /* global moment */
   
-    // blogContainer holds all of our posts
+    // snippetContainer holds all of our snippets
     var snippetContainer = $(".snippet-container");
     var snippetCategorySelect = $("#category");
     // Click events for the edit and delete buttons
     $(document).on("click", "button.delete", handleSnippetDelete);
     $(document).on("click", "button.edit", handleSnippetEdit);
-    // Variable to hold our posts
+    // Variable to hold our snippets
     var snippets;
   
-    // The code below handles the case where we want to get blog snippets for a specific user
+    // The code below handles the case where we want to get snippets for a specific user
     // Looks for a query param in the url for user_id
     var url = window.location.search;
     var userId;
@@ -43,7 +43,7 @@ $(document).ready(function() {
     }
   
     // This function does an API call to delete snippets
-    function deletePost(id) {
+    function deleteSnippet(id) {
       $.ajax({
         method: "DELETE",
         url: "/api/snippets/" + id
@@ -53,14 +53,14 @@ $(document).ready(function() {
         });
     }
   
-    // InitializeRows handles appending all of our constructed post HTML inside blogContainer
+    // InitializeRows handles appending all of our constructed post HTML inside snippetContainer
     function initializeRows() {
-      blogContainer.empty();
+      snippetContainer.empty();
       var snippetsToAdd = [];
       for (var i = 0; i < snippets.length; i++) {
         snippetsToAdd.push(createNewRow(snippets[i]));
       }
-      blogContainer.append(snippetsToAdd);
+      snippetContainer.append(snippetsToAdd);
     }
   
     // This function constructs a snippet's HTML
@@ -81,7 +81,7 @@ $(document).ready(function() {
       var newSnippetDate = $("<small>");
       var newSnippetUser = $("<h5>");
       newSnippetUser.text("Written by: " + snippet.User.name);
-      newPostAuthor.css({
+      newSnippetUser.css({
         float: "right",
         color: "blue",
         "margin-top":
@@ -131,12 +131,12 @@ $(document).ready(function() {
       if (id) {
         partial = " for User #" + id;
       }
-      blogContainer.empty();
+      snippetContainer.empty();
       var messageH2 = $("<h2>");
       messageH2.css({ "text-align": "center", "margin-top": "50px" });
       messageH2.html("No snippets yet" + partial + ", navigate <a href='/cms" + query +
       "'>here</a> in order to get started.");
-      blogContainer.append(messageH2);
+      snippetContainer.append(messageH2);
     }
   
   });
