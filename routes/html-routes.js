@@ -15,4 +15,15 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
+//   // cms route loads cms.html
+//   app.get("/cms", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public/cms.html"));
+//   });
+
+
+//   // users route loads user-manager.html
+//   app.get("/users", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public/user-manager.html"));
+//   });
+
 };
