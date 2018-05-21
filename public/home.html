@@ -1,90 +1,65 @@
+<!-- public snippets -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Snippet Stash | Home</title>
-    <!-- Links to CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SNIPPET stash</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <h1>Snippet Stash</h1>
-    </nav>
-
-
-    <div class="wrapper">
-        <section class="top-container">
-            <h1>Sign In Here</h1>
-            <form class="sign-in-box col col-md-4 form-signin">
-                <br>
-                <!-- <label for="inputEmail" class="sr-only">Email address</label> -->
-                <input type="email" id="inputEmail" class="my-3 form-control" placeholder="Email address" required autofocus>
-                <!-- <br> -->
-                <br>
-                <!-- <label for="inputPassword" class="sr-only">Password</label> -->
-                <input type="password" id="inputPassword" class="mb-4 form-control" placeholder="Password" required>
-                <!-- <br> -->
-                <br>
-                <input class="btn btn-info btn-lg btn-block mb-3" type="button" id="submitInBtnOption" value="Sign in" />
-            </form>
-            <br>
-            <a href="#">Sign up here</a>
-            <br>
-            <a href="#">Enter as a guest</a>
-        </section>
-        <!-- ------------------------------- -->
-
-        <div id="options-container">
-            <form id="form">
-                <div id="viewPartyDeets">
-                    <h4>
-                        <input type="radio" id="firstLogin" name="Group" value="new" data-val="noCode">
-                        <label for="firstLogin"> Sign Up</label>
-                    </h4>
+    <div class="container-fluid login-bg">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="title">
+                    <h1>SNIPPET~stash</h1>
                 </div>
-                <!-- <br> -->
-                <div>
-                    <h4>
-                        <input type="radio" id="groupLogin" name="Group" value="haveGroup" data-val="code">
-                        <label for="groupLogin"> Enter as a guest </label>
-                    </h4>
-                </div>
-                <br>
-                <div class="form-group" id="keycode">
-                    <label for="password-input">Keycode</label>
-                    <input class="form-control" id="keycode-input" type="text">
-                </div>
-            </form>
-            <input class="btn btn-danger" type="button" id="submitInBtnOption" value="Submit" />
+            </div>
         </div>
-        <!-- options-container close -->
+        <!-- end of row -->
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- login start -->
+            <form class="login-container">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-login btn-block ">Submit</button>
+                <a href="#" class="small-link">New User Sign Up</a>
+                <br>
+                <a href="./index.html" class="small-link">Enter as a guest</a>
+            </form>
+            <!-- login end -->
+        </div>
+    </div>
 
-        <!-- ------------------------------- -->
-        <div class="container">
-            <footer class="footer row justify-content-md-center text-center">
-
-                <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+    <footer class="footer">
+        <div class="text-center mb-3">
+            &copy; Copyright 2018
+        </div>
             </footer>
-        </div>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-            crossorigin="anonymous"></script>
-        <script src="./js/home.js"></script>
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
