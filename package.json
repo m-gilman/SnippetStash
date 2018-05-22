@@ -22,5 +22,14 @@
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "sequelize": "^4.37.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-gilman/SnippetStash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/m-gilman/SnippetStash/issues"
+  },
+  "homepage": "https://github.com/m-gilman/SnippetStash#readme"
 }
