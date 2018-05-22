@@ -5,7 +5,9 @@ $(document).ready(function () {
         var code = $("#snippetCode")[0];
         var editor = CodeMirror.fromTextArea(code, {
             lineNumbers: true,
-            theme: "midnight"
+            theme: "midnight",
+            mode: 'htmlmixed',
+            autoCloseTags: true     
         })
     });
 
