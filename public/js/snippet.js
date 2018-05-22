@@ -66,10 +66,6 @@ $(document).ready(function() {
   
     // This function constructs a snippet's HTML
     function createNewRow(snippet) {
-      // var newSnippetCard = $("<div>");
-      // newSnippetCard.addClass("card");
-      // var newSnippetCardHeading = $("<div>");
-      // newSnippetCardHeading.addClass("card-header");
       var deleteBtn = $("<button>");
       deleteBtn.text("delete");
       deleteBtn.addClass("delete btn btn-danger");
@@ -77,28 +73,15 @@ $(document).ready(function() {
       editBtn.text("EDIT");
       editBtn.addClass("edit btn btn-info");
       var newSnippetTitle = $("<h2>");
-      // var newSnippetUser = $("<h5>");
-      // newSnippetUser.text("Written by: " + snippet.User.name);
-      // newSnippetUser.css({
-      //   float: "right",
-      //   color: "blue",
-      //   "margin-top":
-      //   "-10px"
-      // });
       var newSnippetCardBody = $("<div>");
       newSnippetCardBody.addClass("card-body");
       var newSnippetBody = $("<p>");
       newSnippetTitle.text(snippet.title + " ");
       newSnippetBody.text(snippet.body);
-      // newSnippetDate.text(formattedDate);
       newSnippetTitle.append(newSnippetDate);
-      // newSnippetCardHeading.append(deleteBtn);
       newSnippetCardHeading.append(editBtn);
       newSnippetCardHeading.append(newSnippetTitle);
-      // newsnippetCardHeading.append(newSnippetUser);
       newSnippetCardBody.append(newSnippetBody);
-      // newSnippetCard.append(newSnippetCardHeading);
-      // newSnippetCard.append(newSnippetCardBody);
       newSnippetCard.data("snippet", snippet);
       return newSnippetCard;
     }
