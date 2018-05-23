@@ -41,7 +41,7 @@
                     <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-login btn-block" id="login">Submit</button>
-                <a href="./index.html" class="small-link">New User Sign Up</a>
+                <a href="#" class="small-link" data-toggle="modal" data-target="#newUserModal">New User? Sign Up Here</a>
                 <br>
                 <a href="./index.html" class="small-link">Enter as a guest</a>
             </form>
@@ -49,11 +49,58 @@
         </div>
     </div>
 
+    <!-- New User Modal -->
+    <div id="newUserModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                        <div class="container">
+                                <label for="uname">
+                                    <b>Username</b>
+                                </label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                                <label for="psw">
+                                    <b>Password</b>
+                                </label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                                <button type="submit">Login</button>
+<!-- put this on it's own row -->
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+<!-- cancel button just makes modal disappear, and it doesn't come back -->
+                        <!-- <button type="button" onclick="document.getElementById('newUserModal').style.display='none'" class="cancelbtn">Cancel</button> -->
+                                <span class="psw">Forgot
+                                    <a href="#">password?</a>
+                                </span>
+                            </div>
+<!-- add formatting to footer? -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
     <footer class="footer">
         <div class="text-center mb-3">
             &copy; Copyright 2018
         </div>
-            </footer>
+    </footer>
 
 
 
