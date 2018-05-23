@@ -1,0 +1,22 @@
+/* The list-style-type property specifies the type of list item marker.
+The following example shows some of the available list item markers: */
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+    list-style-type: square;
+}
+
+ol.c {
+    list-style-type: upper-roman;
+}
+
+ol.d {
+    list-style-type: lower-alpha;
+}
+
+/* The list-style-image property specifies an image as the list item marker: */
+ul {
+    list-style-image: url('sqpurple.gif');
+}

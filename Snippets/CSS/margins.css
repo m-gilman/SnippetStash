@@ -1,0 +1,52 @@
+/* The CSS margin properties are used to create space around elements, outside of any defined borders.*/
+/* With CSS, you have full control over the margins. There are properties for setting the margin for each side of an element (top, right, bottom, and left). */
+
+/* If the margin property has four values: */
+/* margin: 25px 50px 75px 100px;
+top margin is 25px
+right margin is 50px
+bottom margin is 75px
+left margin is 100px */
+p {
+    margin: 25px 50px 75px 100px;
+}
+
+
+p {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+
+/* If the margin property has three values:
+margin: 25px 50px 75px;
+top margin is 25px
+right and left margins are 50px
+bottom margin is 75px */
+p {
+    margin: 25px 50px 75px;
+}
+
+/* If the margin property has two values:
+margin: 25px 50px;
+top and bottom margins are 25px
+right and left margins are 50px */
+p {
+    margin: 25px 50px;
+}
+
+/* If the margin property has one value:
+margin: 25px;
+all four margins are 25px */
+p {
+    margin: 25px;
+}
+
+/* You can set the margin property to auto to horizontally center the element within its container.
+The element will then take up the specified width, and the remaining space will be split equally between the left and right margins: */
+div {
+    width: 300px;
+    margin: auto;
+    border: 1px solid red;
+}
