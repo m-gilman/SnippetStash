@@ -2,12 +2,12 @@ $(document).ready(function() {
     /* global moment */
   
     // snippetContainer holds all of our snippets
-    var snippetCode = $("#snippetCode");
+    var snippetContainer = $(".snippet-container");
     var snippetCategorySelect = $("#snippetCategory");
     // Click events for the edit and delete buttons
-    $(document).on("click", "button.delete", handleSnippetDelete);
-    $(document).on("click", "button.edit", handleSnippetEdit);
-    $(document).on("click", "submitSnippet",handleSnippetSubmit);
+    // $(document).on("click", "button.delete", handleSnippetDelete);
+    // $(document).on("click", "button.edit", handleSnippetEdit);
+    $(document).on("click", "#createSnippet",handleSnippetSubmit);
     // Variable to hold our snippets
     var snippets;
   
@@ -56,12 +56,12 @@ $(document).ready(function() {
   
     // InitializeRows handles appending all of our constructed post HTML inside snippetCode
     function initializeRows() {
-      snippetCode.empty();
+      snippetContainer.empty();
       var snippetsToAdd = [];
       for (var i = 0; i < snippets.length; i++) {
         snippetsToAdd.push(createNewRow(snippets[i]));
       }
-      snippetCode.append(snippetsToAdd);
+      snippetContainet.append(snippetsToAdd);
     }
   
     // This function constructs a snippet's HTML
