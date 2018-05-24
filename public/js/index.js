@@ -1,14 +1,14 @@
 $(document).ready(function () {
-
+    var code = $("#snippetCode")[0];
+    var editor = CodeMirror.fromTextArea(code, {
+        lineNumbers: true,
+        theme: "midnight",
+        mode: 'htmlmixed',
+        autoCloseTags: true
+    })
     // Modal with codeMirror
     $('#createSnippet').on('shown.bs.modal', function () {
-        var code = $("#snippetCode")[0];
-        var editor = CodeMirror.fromTextArea(code, {
-            lineNumbers: true,
-            theme: "midnight",
-            mode: 'htmlmixed',
-            autoCloseTags: true
-        })
+        editor.refresh();
     });
 
 
@@ -26,7 +26,5 @@ $(document).ready(function () {
             $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
         });
     });
-
-
 
 });
