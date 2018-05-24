@@ -1,4 +1,4 @@
-<!-- my snippets -->
+<!-- public snippets -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,8 +51,8 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="public.html">
-                            <i class="fa fa-globe fa-fw"></i> All Public Snippets</a>
+                        <a href="index.html">
+                            <i class="fa fa-heart fa-fw"></i> My Snippets</a>
                     </li>
                     <!-- <li>
                         <a href="home.html">
@@ -91,17 +91,11 @@
 
     <div id="page-wrapper">
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <h1 class="page-header">My Snippets</h1>
+            <div class="col-xs-12 col-sm-8">
+                <h1 class="page-header">Public Snippets</h1>
+                <h4>Click on the scissors to stash any snippets in your own library</h4>
             </div>
-            <div class="col-xs-12 col-sm-5">
-                    <!-- Add a Snippet Button - Triggers Modal -->
-                    <button type="button" class="page-header btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#createSnippet">
-                        <span class="glyphicon glyphicon-plus-sign"></span>
-                        Add A New Snippet
-                    </button>
-            </div>
-        </div>
+        </div> 
 
         <!-- /.row -->
         <div class="row">
@@ -113,7 +107,7 @@
                                 <div class="row">
                                     <div class="col-xs-3">
                                         <a href="" type="small-link" aria-label="Left Align">
-                                            <span class="glyphicon glyphicon-trash" id="deleteSnippet" aria-hidden="true"></span>
+                                            <span class="glyphicon glyphicon-scissors" id="saveSnippet" aria-hidden="true">Stash</span>
                                         </a>
                                     </div>
                                     <div class="col-xs-9 text-right">
@@ -207,78 +201,6 @@
                 </div>
             </div>
 
-
-            <!-- Add a Snippet Modal -->
-            <div class="modal fade" id="createSnippet" tabindex="-1" role="dialog" aria-labelledby="createSnippetLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title" id="createSnippetLabel">Create Snippet</h4>
-                        </div>
-                        <div class="modal-body">
-
-                            <form class="form-horizontal">
-                                <div class="row">
-                                    <!-- modal title -->
-
-                                    <div class="col-sm-1"></div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="SnippetTitle" placeholder="Snippet Title">
-                                        </div>
-                                    </div>
-
-                                    <!-- Category -->
-                                    <div class="form-group">
-                                        <!-- <label for="snippetCategory" class="col-sm-4 control-label">Select a Category</label> -->
-                                        <div class="col-sm-4">
-                                            <select class="form-control" id="snippetCategory">
-                                                <option>HTML</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end of first row -->
-
-                                <div class="row">
-                                    <!-- snippet code -->
-                                    <!-- <div class="form-group"> -->
-                                    <div class="col-sm-1"></div>
-                                    <div class="col-sm-10 snippetCodeWrapper">
-                                        <!-- <label for="snippetCode" class="col-sm-10 control-label">Snippet Code </label> -->
-                                        <textarea id="snippetCode"></textarea>
-                                    </div>
-                                    <!-- </div> -->
-                                    <!-- end of second row -->
-                                </div>
-                                <div class="row">
-                                    <!-- description -->
-                                    <div class="form-group"></div>
-                                    <div class="col-sm-1"></div>
-                                    <div class="col-sm-10">
-                                        <!-- <label for="snippetDescription" class="col-sm-2 control-label">Snippet Description</label> -->
-                                        <input type="text" class="form-control" id="snippetDescription" placeholder="A description of this snippet">
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn btn-success">Create Snippet</button>
-                                </div>
-                            </form>
-                        </div>
-
-
-                    </div>
-                    
-                </div>
-            </div>
-            <hr>
 
         <footer>
             <div class="indexFooter">
