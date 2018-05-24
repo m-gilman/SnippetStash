@@ -1,3 +1,4 @@
+<!-- public snippets -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SNIPPET stash</title>
+    <title>SNIPPETstash</title>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -16,7 +17,6 @@
     <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" type="text/css">
     <!-- Codemirror Theme -->
     <link rel="stylesheet" href="vendor/codemirror/theme/midnight.css" type="text/css">
-
 
 
 </head>
@@ -31,7 +31,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">SNIPPET stash</a>
+            <a class="navbar-brand" href="index.html">
+                <span class="glyphicon glyphicon-scissors"></span>SNIPPETstash</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -42,7 +43,7 @@
                         <div class="input-group custom-search-form">
                             <input type="text" class="form-control" placeholder="Search...">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
+                                <button class="btn btn-info" type="button">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>
@@ -52,6 +53,10 @@
                     <li>
                         <a href="index.html">
                             <i class="fa fa-tasks fa-fw"></i> All Public Snippets</a>
+                    </li>
+                    <li>
+                        <a href="home.html">
+                            <i class="fa fa-tasks fa-fw"></i> My Snippets</a>
                     </li>
                     <li>
                         <a href="#">
@@ -97,120 +102,237 @@
             </div>
         </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="createSnippet" tabindex="-1" role="dialog" aria-labelledby="createSnippetLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="createSnippetLabel">Create Snippet</h4>
-                    </div>
-                    <div class="modal-body">
-
-                        <form class="form-horizontal">
-                            <div class="row">
-                                <!-- modal title -->
-
-                                <div class="col-sm-1"></div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="SnippetTitle" placeholder="Snippet Title">
-                                    </div>
-                                </div>
-
-                                <!-- Category -->
-                                <div class="form-group">
-                                    <!-- <label for="snippetCategory" class="col-sm-4 control-label">Select a Category</label> -->
-                                    <div class="col-sm-4">
-                                        <select class="form-control" id="snippetCategory">
-                                            <option>HTML</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end of first row -->
-
-                            <div class="row">
-                                <!-- snippet code -->
-                                <!-- <div class="form-group"> -->
-                                <div class="col-sm-1"></div>
-                                <div class="col-sm-10 snippetCodeWrapper">
-                                    <!-- <label for="snippetCode" class="col-sm-10 control-label">Snippet Code </label> -->
-                                    <textarea id="snippetCode"></textarea>
-                                </div>
-                                <!-- </div> -->
-                                <!-- end of second row -->
-                            </div>
-                            <div class="row">
-                                <!-- description -->
-                                <div class="form-group"></div>
-                                <div class="col-sm-1"></div>
-                                <div class="col-sm-10">
-                                    <!-- <label for="snippetDescription" class="col-sm-2 control-label">Snippet Description</label> -->
-                                    <input type="text" class="form-control" id="snippetDescription" placeholder="A description of this snippet">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-success">Create Snippet</button>
-                </div>
-            </div>
-        </div>
-        <hr>
-
-
-
         <!-- /.row -->
         <div class="row">
-            <div class="col-lg-9 col-lg-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <i class="fa fa-tasks fa-fw"></i>
+            <div class="col-lg-11 col-lg-12">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <!-- <i class="fa fa-tasks fa-fw"></i> -->
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">API Routing Snippet</div>
+                                        <div>API Routing Example to get ALL Routes...</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-9 text-right">
-                                <div class="huge">API Routing Snippet</div>
-                                <div>API Routing Example to get ALL Routes...</div>
+                            <!-- <div><br></div> -->
+                            <a href="#">
+                                <div class="snippetDetails">
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                        <span class="glyphicon glyphicon-plus"></span> View Details</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="well">
+                                                        <p>Snippet details go here.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                                        <span class="glyphicon glyphicon-plus"></span> Comments</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#commentModal">Add a Comment</a>
+                                                    <div>
+                                                        <br>
+                                                    </div>
+                                                    <div class="well">
+                                                        <p>Comments go here.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </a>
+                            </div>
                             </div>
                         </div>
                     </div>
-                    <a href="#">
-                        <div class="panel-footer">
-                            <span class="pull-left">View Details</span>
-                            <span class="pull-right">
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </a>
                 </div>
             </div>
-        </div>
-    </div>
 
+            <!-- "Add a Comment" Modal -->
+            <div id="commentModal" class="modal fade" tabindex="1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title">Add a Comment</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <form class="newComment">
+                                    <div class="form-group row">
+                                        <div class="col-xs-6">
+                                            <div class="form-group row">
+                                                <div class="col-xs-12">
+                                                    <input type="text" class="form-control" placeholder="Name (Required)" required>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="form-group row">
+                                                <div class="col-xs-12">
+                                                    <textarea class="form-control" placeholder="Add a Comment (Required)" rows="5" required></textarea>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="createSnippet" tabindex="-1" role="dialog" aria-labelledby="createSnippetLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="createSnippetLabel">Create Snippet</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <form class="form-horizontal">
+                                <div class="row">
+                                    <!-- modal title -->
+
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="SnippetTitle" placeholder="Snippet Title">
+                                        </div>
+                                    </div>
+
+                                    <!-- Category -->
+                                    <div class="form-group">
+                                        <!-- <label for="snippetCategory" class="col-sm-4 control-label">Select a Category</label> -->
+                                        <div class="col-sm-4">
+                                            <select class="form-control" id="snippetCategory">
+                                                <option>HTML</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end of first row -->
+
+                                <div class="row">
+                                    <!-- snippet code -->
+                                    <!-- <div class="form-group"> -->
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-10 snippetCodeWrapper">
+                                        <!-- <label for="snippetCode" class="col-sm-10 control-label">Snippet Code </label> -->
+                                        <textarea id="snippetCode"></textarea>
+                                    </div>
+                                    <!-- </div> -->
+                                    <!-- end of second row -->
+                                </div>
+                                <div class="row">
+                                    <!-- description -->
+                                    <div class="form-group"></div>
+                                    <div class="col-sm-1"></div>
+                                    <div class="col-sm-10">
+                                        <!-- <label for="snippetDescription" class="col-sm-2 control-label">Snippet Description</label> -->
+                                        <input type="text" class="form-control" id="snippetDescription" placeholder="A description of this snippet">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">Create Snippet</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+
+
+            <!-- /.row -->
+            <!-- <div class="row">
+                <div class="col-lg-9 col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-fw"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">API Routing Snippet</div>
+                                    <div>API Routing Example to get ALL Routes...</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right">
+                                    <i class="fa fa-arrow-circle-right"></i>
+                                </span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <footer>
+            <div class="indexFooter">
+                <div class="container">
+                    <p class="text">SNIPPETstash ©2018</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
     <!-- Custom JS -->
     <script src="js/index.js"></script>
+
     <!-- Codemirror JavaScript -->
     <script src="vendor/codemirror/lib/codemirror.js"> </script>
     <!-- Codemirror Mode -->
     <script src="vendor/codemirror/mode/javascript/javascript.js"></script>
-
+    <!-- Codemirror addons -->
     <script src="vendor/codemirror/addon/selection/selection-pointer.js"></script>
     <script src="vendor/codemirror/addon/edit/closetag.js"></script>
     <script src="vendor/codemirror/mode/xml/xml.js"></script>
