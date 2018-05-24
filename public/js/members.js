@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+    // This file just does a GET request to figure out which user is logged in
+    // and updates the HTML on the page
+    $.get("/api/user_data").then(function (data) {
+        $(".member-name").text(data.email);
+    });
+
     var code = $("#snippetCode")[0];
     var editor = CodeMirror.fromTextArea(code, {
         lineNumbers: true,
@@ -10,7 +17,6 @@ $(document).ready(function () {
     $('#createSnippet').on('shown.bs.modal', function () {
         editor.refresh();
     });
-
 
     // Accordion feature with "+" and "-" icons
     $(document).ready(function () {
@@ -26,5 +32,4 @@ $(document).ready(function () {
             $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
         });
     });
-
 });

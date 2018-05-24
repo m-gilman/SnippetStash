@@ -1,12 +1,47 @@
 $(document).ready(function () {
 
-    $("#login").click(function (event) {
+    // Getting references to our form and inputs
+    var loginForm = $("form.login");
+    var emailInput = $("input#email-input");
+    var passwordInput = $("input#password-input");
+
+    // When the form is submitted, we validate there's an email and password entered
+    loginForm.on("submit", function (event) {
         event.preventDefault();
-        alert('We are working on a Login feature. Please click "Enter as a guest" to view our many snippets.');
+        var userData = {
+            email: emailInput.val().trim(),
+            password: passwordInput.val().trim()
+        };
+
+
+         // Try to read from the file system, but move on if there"s an issue.
+         if (userData.email === userData.email & userData.password === userData.password){
+            (function (data){
+                window.location.replace(data);
+            })
+         } else{
+            alert("Email or Password not correct,please try again!")
+                console.log(err);
+             } 
+
+        // If we have an email and password we run the loginUser function and clear the form
+        loginUser(userData.email, userData.password);
+        emailInput.val("");
+        passwordInput.val("");
     });
 
-    // New User Sign Up Modal Trigger
-    $('#newUser').on('shown.bs.modal', function () {
+    // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
+    function loginUser(email, password) {
+        $.post("/api/login", {
+            email: email,
+            password: password
+        }).then(function (data) {
+            window.location.replace(data);
+            // If there's an error, log the error
+        }).catch(function (err) {
+            console.log(err);
+            alert("Email or Password not correct,please try again!")
+        });
+    }
     });
 
-});
