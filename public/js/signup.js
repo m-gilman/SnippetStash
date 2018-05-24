@@ -15,9 +15,9 @@ $(document).ready(function () {
         if (!userData.email || !userData.password) {
             return   alert("Please fill all of the fields!")
                     console.log(err);
-        }
-        else if(userData.email === userData.email & userData.password === userData.password){
-            return   alert("You can nots sign up with this email and password, it is already exist, try different email again, or log in!")
+        // }
+        // else if(userData.email === userData.email & userData.password === userData.password){
+        //     return   alert("You can not sign up with this email and password, it is already exist, try different email again, or log in!")
         }
         // If we have an email and password, run the signUpUser function
         signUpUser(userData.email, userData.password);
