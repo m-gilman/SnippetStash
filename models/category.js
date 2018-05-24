@@ -6,13 +6,13 @@ module.exports = function (sequelize, DataTypes) {
     });
 
 
-    Category.associate = function (models) {
-        Category.belongsTo(models.Snippet, {
-            foreignKey: {
-                allowNull: true
-            }
-        });
-    };
+    // Category.associate = function (models) {
+    //     Category.belongsTo(models.Snippet, {
+    //         foreignKey: {
+    //             allowNull: true
+    //         }
+    //     });
+    // };
 
     return Category;
 };
