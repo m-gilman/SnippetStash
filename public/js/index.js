@@ -12,8 +12,6 @@ $(document).ready(function () {
     });
 
 
-
-
     // Accordion feature with "+" and "-" icons
     $(document).ready(function () {
         // Add minus icon for collapse element which is open by default
@@ -28,7 +26,5 @@ $(document).ready(function () {
             $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
         });
     });
-
-
 
 });
