@@ -11,9 +11,13 @@ $(document).ready(function () {
             email: emailInput.val().trim(),
             password: passwordInput.val().trim()
         };
-
+    
         if (!userData.email || !userData.password) {
-            return;
+            return   alert("Please fill all of the fields!")
+                    console.log(err);
+        }
+        else if(userData.email === userData.email & userData.password === userData.password){
+            return   alert("You can nots sign up with this email and password, it is already exist, try different email again, or log in!")
         }
         // If we have an email and password, run the signUpUser function
         signUpUser(userData.email, userData.password);
@@ -31,6 +35,7 @@ $(document).ready(function () {
             window.location.replace(data);
             // If there's an error, handle it by throwing up a bootstrap alert
         }).catch(handleLoginErr);
+        // alert("Please fill all of the fields!")
     }
 
     function handleLoginErr(err) {

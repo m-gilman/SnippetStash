@@ -13,9 +13,16 @@ $(document).ready(function () {
             password: passwordInput.val().trim()
         };
 
-        if (!userData.email || !userData.password) {
-            return;
-        }
+
+         // Try to read from the file system, but move on if there"s an issue.
+         if (userData.email === userData.email & userData.password === userData.password){
+            (function (data){
+                window.location.replace(data);
+            })
+         } else{
+            alert("Email or Password not correct,please try again!")
+                console.log(err);
+             } 
 
         // If we have an email and password we run the loginUser function and clear the form
         loginUser(userData.email, userData.password);
@@ -33,16 +40,8 @@ $(document).ready(function () {
             // If there's an error, log the error
         }).catch(function (err) {
             console.log(err);
+            alert("Email or Password not correct,please try again!")
         });
     }
-
-    // $("#login").click(function (event) {
-    //     event.preventDefault();
-
-    // });
-
-    // New User Sign Up Modal Trigger
-    $('#newUser').on('shown.bs.modal', function () {
     });
 
-});
