@@ -6,10 +6,10 @@ CREATE DATABASE snippetStash;
 
 USE snippetStash;
 
-INSERT INTO users (id, email, password, createdAt, updatedAt) VALUES
-(default, 'admin@admin.com', '12345', NOW(), NOW());
+-- INSERT INTO users (id, email, password, createdAt, updatedAt) VALUES
+-- (default, 'admin@admin.com', '12345', NOW(), NOW());
 
-SELECT * FROM users;
+-- SELECT * FROM users;
 
 INSERT INTO categories (catName, createdAt, updatedAt) VALUES
 ('Ajax', NOW(), NOW()),
