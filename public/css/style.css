@@ -1,7 +1,3 @@
-body {
-  font-family: Helvetica, Arial, Sans-Serif;
-}
-
 html .homePageBody {
   background-color: black;
   background: url('../images/bg.png'); 
@@ -16,9 +12,8 @@ html .homePageBody {
 }
 
 .title{
-  color: white;
   text-align: center;
-  background: rgb(41, 66, 123, 0.5);
+  background: rgba(12, 2, 12, 0.13);
   padding: 30px 60px;
   margin-top: 2vh;
   /* https://www.cssmatic.com/box-shadow */
@@ -179,22 +174,5 @@ html .homePageBody {
   background-color: #5cb85c;
 }
 
-#saveSnippet {
-  color: white;
-  font-size: 19px;
-}
-
-#saveSnippet:hover {
-  color: #5bc0de;
-}
-
-#deleteSnippet {
-  color: white;
-  font-size: 19px;
-}
-
-#deleteSnippet:hover {
-  color: #5bc0de;
-}
 
 }
