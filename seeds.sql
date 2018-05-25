@@ -1,3 +1,9 @@
+/*
+
+DROP DATABASE IF EXISTS snippetStash;
+CREATE DATABASE snippetStash;
+*/
+
 USE snippetStash;
 INSERT INTO users(username, password, createdAt, updatedAt) VALUES(
 'Admin','ABC123!',  NOW(),  NOW());
@@ -20,4 +26,8 @@ INSERT INTO categories (catName, createdAt, updatedAt) VALUES
 ('Timers',NOW(),NOW());
 
 SELECT *
+<<<<<<< HEAD
 FROM categories;
+=======
+FROM categories;
+>>>>>>> 2abd27398e9a1a9c86c113e9c7129c8e0c555861
