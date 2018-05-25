@@ -6,6 +6,8 @@ $(document).ready(function () {
         $(".member-name").text(data.email);
     });
 
+
+    // CodeMirror
     var code = $("#snippetCode")[0];
     var editor = CodeMirror.fromTextArea(code, {
         lineNumbers: true,
