@@ -173,6 +173,8 @@ html .homePageBody {
   color: white;
   background-color: #5cb85c;
 }
-
+.member-id {
+  display: none;
+}
 
 }

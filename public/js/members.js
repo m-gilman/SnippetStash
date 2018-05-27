@@ -4,21 +4,22 @@ $(document).ready(function () {
     // and updates the HTML on the page
     $.get("/api/user_data").then(function (data) {
         $(".member-name").text(data.email);
+        $(".member-id").text(data.id);
     });
 
 
     // CodeMirror
-    var code = $("#snippetCode")[0];
-    var editor = CodeMirror.fromTextArea(code, {
-        lineNumbers: true,
-        theme: "midnight",
-        mode: 'htmlmixed',
-        autoCloseTags: true
-    })
-    // Modal with codeMirror
-    $('#createSnippet').on('shown.bs.modal', function () {
-        editor.refresh();
-    });
+    // var code = $("#snippetCode")[0];
+    // var editor = CodeMirror.fromTextArea(code, {
+    //     lineNumbers: true,
+    //     theme: "midnight",
+    //     mode: 'htmlmixed',
+    //     autoCloseTags: true
+    // })
+    // // Modal with codeMirror
+    // $('#createSnippet').on('shown.bs.modal', function () {
+    //     editor.refresh();
+    // });
 
     // Accordion feature with "+" and "-" icons
     $(document).ready(function () {

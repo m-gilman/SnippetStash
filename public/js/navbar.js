@@ -11,8 +11,11 @@ $(document).ready(function () {
 
     function renderNavbarList(itemToAdd) {
     var newLi = $("<li/>").appendTo('#side-menu');
+    var id = itemToAdd.id;
     newLi.data("category", itemToAdd);
-    newLi.append("<a href='/'><i class='fa  fa-fw'></i>" +itemToAdd.catName + "<span></span> </a>");
+    newLi.attr("id", id);
+    // newLi.append("<a href='"+url+"' ><i class='fa  fa-fw'></i>" +itemToAdd.catName + "<span></span> </a>");
+    newLi.append("<a href='#' ><i class='fa  fa-fw'></i>" +itemToAdd.catName + "<span></span> </a>");
     return newLi;
     }
 

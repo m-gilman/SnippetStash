@@ -36,7 +36,8 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h2>Welcome
-                    <span class="member-name"></span>
+                    <span class="member-name" ></span>
+                    <span class="member-id"></span>
                 </h2>
             </div>
         </div>
@@ -55,7 +56,7 @@
                 <!-- <span class="icon-bar"></span> -->
                 <!-- <span class="icon-bar"></span> -->
             </button>
-            
+
             <!-- brand logo -->
             <a class="navbar-brand" href="public.html">
                 <span class="glyphicon glyphicon-scissors"></span>SNIPPETstash
@@ -70,7 +71,7 @@
                         <div class="input-group custom-search-form">
                             <input type="text" class="form-control" placeholder="Search...">
                             <span class="input-group-btn">
-                                <button class="btn btn-info" type="button">
+                                <button class="btn btn-default" type="button">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>
@@ -78,40 +79,9 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-
                         <a href="public.html">
-                            <i class="fa fa-globe fa-fw"></i> All Public Snippets</a>
+                            <i class="fa fa-tasks fa-fw"></i> All Public Snippets</a>
                     </li>
-                    <!-- <li>
-                        <a href="login.html">
-                            <i class="fa fa-tasks fa-fw"></i> My Snippets</a>
-                    </li> -->
-
-                    <li>
-                        <a href="#">
-                            <i class="fa  fa-fw"></i> API
-                            <span></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa  fa-fw"></i> CSS
-                            <span></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa  fa-fw"></i> JavaScript
-                            <span></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa  fa-fw"></i> node.js
-                            <span></span>
-                        </a>
-                    </li>
-                </ul>
             </div>
             <!-- /.sidebar-collapse -->
         </div>
@@ -247,7 +217,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <form class="form-horizontal">
+                    <form id="stash-form" class="form-horizontal">
                         <div class="row">
                             <!-- modal title -->
 
@@ -263,10 +233,8 @@
                                 <!-- <label for="snippetCategory" class="col-sm-4 control-label">Select a Category</label> -->
                                 <div class="col-sm-4">
                                     <select class="form-control" id="snippetCategory">
-                                        <option>HTML</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
+                                        <option value="1">Ajax</option>
+                                        <option value="2">CSS</option>
                                     </select>
                                 </div>
                             </div>
@@ -277,9 +245,9 @@
                             <!-- snippet code -->
                             <!-- <div class="form-group"> -->
                             <div class="col-sm-1"></div>
-                            <div class="col-sm-10 snippetCodeWrapper">
+                            <div class="col-sm-10 ">
                                 <!-- <label for="snippetCode" class="col-sm-10 control-label">Snippet Code </label> -->
-                                <textarea id="snippetCode"></textarea>
+                                <textarea class="form-control" rows="5" id="snippetCode"></textarea>
                             </div>
                             <!-- </div> -->
                             <!-- end of second row -->
@@ -295,7 +263,8 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-success">Create Snippet</button>
+                            <!-- button type for the Creat Snippet needs to be type="submit" b/c the js is listen for a form submission from a submit button -->
+                            <button type="submit" class="btn btn-success">Create Snippet</button>
                         </div>
                     </form>
                 </div>
@@ -321,20 +290,22 @@
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/members.js"></script>
+    <script src="js/members.js"></script>   
+    <script src="js/snippet.js" type="text/javascript"></script>     
+    <script src="js/navbar.js" type="text/javascript"></script>
 
     <!-- Codemirror JavaScript -->
-    <script src="vendor/codemirror/lib/codemirror.js"> </script>
+    <!-- <script src="vendor/codemirror/lib/codemirror.js"> </script> -->
     <!-- Codemirror Mode -->
-    <script src="vendor/codemirror/mode/javascript/javascript.js"></script>
+    <!-- <script src="vendor/codemirror/mode/javascript/javascript.js"></script> -->
     <!-- Codemirror addons -->
-    <script src="vendor/codemirror/addon/selection/selection-pointer.js"></script>
+    <!-- <script src="vendor/codemirror/addon/selection/selection-pointer.js"></script>
     <script src="vendor/codemirror/addon/edit/closetag.js"></script>
     <script src="vendor/codemirror/mode/xml/xml.js"></script>
     <script src="vendor/codemirror/mode/javascript/javascript.js"></script>
     <script src="vendor/codemirror/mode/css/css.js"></script>
     <script src="vendor/codemirror/mode/vbscript/vbscript.js"></script>
-    <script src="vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script> -->
 
 
 

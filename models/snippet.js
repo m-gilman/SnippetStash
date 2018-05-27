@@ -19,8 +19,6 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Snippet.associate = function(models) {
-    // We're saying that a Snippet should belong to an Author
-    // A Snippet can't be created without an Author due to the foreign key constraint
     Snippet.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
