@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var dir = window.location.pathname;
     getCategories();
     function getCategories() {
         $.get("/api/categories", function (data) {
@@ -9,18 +10,21 @@ $(document).ready(function () {
         });
     }
 
+    
+    
     function renderNavbarList(itemToAdd) {
-    var newLi = $("<li/>").appendTo('#side-menu');
     var id = itemToAdd.id;
+    var url = "api/snippets/" + id;
+    var newLi = $("<li/>").appendTo('#side-menu');
     newLi.data("category", itemToAdd);
     newLi.attr("id", id);
-    // newLi.append("<a href='"+url+"' ><i class='fa  fa-fw'></i>" +itemToAdd.catName + "<span></span> </a>");
-    newLi.append("<a href='#' ><i class='fa  fa-fw'></i>" +itemToAdd.catName + "<span></span> </a>");
+    newLi.append("<a href='"+dir+"?catId=" +id+ "'><i class='fa  fa-fw'</i>" +itemToAdd.catName + "<span></span> </a>");
+    // newLi.append("<a href='/members?catId=" +id+ "'><i class='fa  fa-fw'</i>" +itemToAdd.catName + "<span></span> </a>");
     return newLi;
     }
 
+    
+
 });
-
-
 
 

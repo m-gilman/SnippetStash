@@ -1,19 +1,25 @@
 $(document).ready(function () {
 
-    getAllSnippets();
+    var url = window.location.search;
+    var dir = window.location.pathname;
+    if (url.indexOf("?catId=") !== -1) {
+        catId = url.split("=")[1];        
+        getAllSnippetsByCategory(catId);
+      }
+    else{
+        catId = 1;
+        getAllSnippets(catId);;
+    }
+    
     var titleInput = $("#SnippetTitle");
     var contentInput = $("#snippetCode");
     var stashForm = $("#stash-form");
     var catId = $("#snippetCategory");
     var usrName = $(".member-id");
-    var navCatId = $(this).attr("id");
+    
 
-    $(navCatId).on("click", function(){
-        alert("This is the item id: " + navCatId); 
-      }); 
 
     $(stashForm).on("submit", function handleFormSubmit(event) {
-        alert("Button was clicked");
         event.preventDefault();
         // Wont submit the post if we are missing a name or a password
         if (!titleInput.val().trim() || !contentInput.val().trim() || !usrName.text()) {
@@ -40,12 +46,12 @@ $(document).ready(function () {
         console.log("Snippet Code: " + contentInput.val().trim());
         console.log("Member Email: " + usrName.text());
         $.post("/api/snippets", newSnippet, function () {
-            window.location.href = "/api/snippets";
+            window.location.href = dir +"?catId=" + catId.val();
         });
     };
 
-    function getAllSnippetsByCategory() {
-        $.get("/api/snippets/:CategoryId", function (data) {
+    function getAllSnippetsByCategory(id) {
+        $.get("/api/snippets/" +id, function (data) {
             var itemToAdd = [];
             for (var i = 0; i < data.length; i++) {
                 itemToAdd.push(renderSnippets(data[i]));
