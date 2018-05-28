@@ -12,6 +12,10 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
+    snippetDescription: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     public :{
         type: DataTypes.BOOLEAN,
         defaultValue: true
