@@ -1,4 +1,3 @@
-
-DROP DATABASE IF EXISTS snippetStash;
-CREATE DATABASE snippetStash;
-
+DROP DATABASE IF EXISTS snippetstash;
+CREATE DATABASE snippetstash;
+USE snippetstash;

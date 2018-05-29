@@ -2,7 +2,7 @@
     "development": {
       "username": "root",
       "password": "root",
-      "database": "snippetStash",
+      "database": "snippetstash",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
