@@ -1,57 +1,81 @@
+
 html .homePageBody {
-  background-color: black;
-  background: url('../images/bg.png'); 
+  background: url('../images/bg1.png'); 
 }
+
+.login-box {
+  width: 333px;
+  height: 352px;
+  padding: 58px 76px 0 76px;
+  color: #ebebeb;
+  font: 12px Arial, Helvetica, sans-serif;
+  background: url('../images/bg.png') no-repeat left top;
+
+}
+
 
 
 /* homepage with login */
 .login-bg {
-  background: url('../images/bg.png'); 
+  background: url('../images/bg1.png'); 
   width: 100%; 
   height: 100%;
-}
+  }
 
 .title{
   text-align: center;
-  background: rgba(12, 2, 12, 0.13);
-  padding: 30px 60px;
+  color: white;
+  background: rgba(137, 199, 203, 0.75);
+  padding: 10px 20px;
   margin-top: 2vh;
-  /* https://www.cssmatic.com/box-shadow */
-  -webkit-box-shadow: 0px 0px 300px 0px rgba(255,247,255,0.13);
-  -moz-box-shadow: 0px 0px 300px 0px rgba(255,247,255,0.13);
-  box-shadow: 0px 0px 300px 0px rgba(255,247,255,0.13);
+  border: solid 10px #F25C3E;
+  
 }
 
 .title h1 {
-  color: #d6d6c2;
-  font-size: 60px;
-  font-family: monospace;
+  color: #363946;
+  font-size: 40px;
+  font-family: 'Lobster Two', cursive;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .login-container{
-  color: #d6d6c2;
-  font-size: 30px;
+  color: 363946;
+  font-size: 22px;
   font-family: 'Arial Narrow Bold', sans-serif;
-  padding: 50px 60px;
-  margin: 5vh 0;
-
-  /* https://www.cssmatic.com/box-shadow */
-  -webkit-box-shadow: 0px 0px 300px 0px rgba(255,247,255,0.13);
-  -moz-box-shadow: 0px 0px 300px 0px rgba(255,247,255,0.13);
-  box-shadow: 0px 0px 300px 0px rgba(255,247,255,0.13);
+  padding: 0 30px;
+  margin: 5vh -5px;
+  background: rgba(137, 199, 203, 0.75);
+  border: solid 10px #F25C3E;
 }
 
 .btn-login {
   font-size: 25px;
   font-family: 'Arial Narrow Bold', sans-serif;
+  margin-bottom:-15px;
   color: white;
-  background-color: #29427b;
+  background-color: #F25C3E;
 }
 
 .btn-login:hover {
   color: white;
-  background-color:	#2a215f;
+  background-color:	#8EA09C;
 }
+
+.btn-login:focus{
+  color: white;
+}
+
+
+.signUpLink {
+  color: #F25C3E;
+  /* text-decoration: none; */
+}
+
 
 .small-link {
   color: #29427b;
@@ -61,7 +85,7 @@ html .homePageBody {
 .footer {
   margin-top: 10px;
   background: #1C0613;
-  color: #d6d6c2;
+  color: white;
 }
 
 
