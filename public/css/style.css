@@ -137,19 +137,19 @@ h2 {
   border-radius: 4px;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   #page-wrapper {
     position: inherit;
     margin: 0 0 0 250px;
     padding: 0 30px;
     border-left: 1px solid #e7e7e7;
-  }
+  } */
 
 .navbar {
   background-color: #89C7CB;
 }
 
-.navbar-default .navbar-brand {
+.navbar-brand {
   font-size: 30px;
   color: white;
 }
@@ -217,6 +217,18 @@ h2 {
 
 .panel-primary {
   border-color: #8EA09C;
+}
+
+.logout {
+  font-size: 20px;
+  color: white;
+  float: right;
+  margin: 10px 15px 0 0;
+}
+
+.welcome {
+  color: white;
+  margin: 15px 0 0 20%;
 }
 
 .huge {
