@@ -94,12 +94,6 @@ h2 {
   /* text-decoration: none; */
 }
 
-
-.small-link {
-  color: #29427b;
-  font-size: 20px;
-}
-
 .footer {
   margin-top: 10px;
   background: #1C0613;
@@ -107,6 +101,7 @@ h2 {
 }
 
 .sidebar-nav a {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #3A6EB4;
 }
 
