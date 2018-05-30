@@ -42,7 +42,7 @@
             <span class="member-name"></span>
             <span class="member-id"></span>
         </h2>
-        <a class="logout"  href="/logout">Logout</a>
+        <a class="logout" href="/logout">Logout</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -85,7 +85,7 @@
     </div>
 
     <!-- /.row -->
-    <div class="row" id="append-to-me">
+    <div class="row col-sm-offset-3" id="append-to-me">
 
     </div>
 </div>
@@ -145,13 +145,14 @@
                         <div class="col-sm-1"></div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="SnippetTitle" placeholder="Snippet Title">
+                                <label for="SnippetTitle" class="control-label">Snippet Title</label>
+                                <input type="text" class="form-control" id="SnippetTitle" placeholder="">
                             </div>
                         </div>
 
                         <!-- Category -->
                         <div class="form-group">
-                            <!-- <label for="snippetCategory" class="col-sm-4 control-label">Select a Category</label> -->
+                            <label for="snippetCategory" class="col-sm-4 control-label">Select a Category</label>
                             <div class="col-sm-4">
                                 <select class="form-control" id="snippetCategory">
                                     <option value="1">Ajax</option>
@@ -177,8 +178,8 @@
                     <div class="row">
                         <!-- snippet code -->
                         <!-- <div class="form-group"> -->
-                        <div class="col-sm-1"></div>
-                        <div class="col-sm-10 ">
+                        <!-- <div class="col-sm-1"></div> -->
+                        <div class="col-sm-10 col-sm-offset-1">
                             <!-- <label for="snippetCode" class="col-sm-10 control-label">Snippet Code </label> -->
                             <textarea class="form-control" rows="5" id="snippetCode"></textarea>
                         </div>
@@ -189,9 +190,10 @@
                         <!-- description -->
                         <div class="form-group"></div>
                         <div class="col-sm-1"></div>
-                        <div class="col-sm-10">
+                        <div class="col-sm-10" style="margin-bottom: 10px;">
                             <!-- <label for="snippetDescription" class="col-sm-2 control-label">Snippet Description</label> -->
                             <input type="text" class="form-control" id="snippetDescription" placeholder="A description of this snippet">
+                            <input type="checkbox" name="public" value="1" checked="checked"> Make this a public snippet
                         </div>
                     </div>
                     <div class="modal-footer">
