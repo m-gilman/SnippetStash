@@ -9,17 +9,17 @@ $(document).ready(function () {
 
 
     // CodeMirror
-    // var code = $("#snippetCode")[0];
-    // var editor = CodeMirror.fromTextArea(code, {
-    //     lineNumbers: true,
-    //     theme: "midnight",
-    //     mode: 'htmlmixed',
-    //     autoCloseTags: true
-    // })
-    // // Modal with codeMirror
-    // $('#createSnippet').on('shown.bs.modal', function () {
-    //     editor.refresh();
-    // });
+    var code = $("#snippetCode")[0];
+    var editor = CodeMirror.fromTextArea(code, {
+        lineNumbers: true,
+        theme: "midnight",
+        mode: 'javascript',
+        autoCloseTags: true
+    })
+    // Modal with codeMirror
+    $('#createSnippet').on('shown.bs.modal', function () {
+        editor.refresh();
+    });
 
     // Accordion feature with "+" and "-" icons
     $(document).ready(function () {
