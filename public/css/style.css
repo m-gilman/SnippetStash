@@ -14,6 +14,24 @@ html .homePageBody {
 }
 
 
+#saveSnippet {
+    color: white;
+    font-size: 19px;
+  }
+  
+  #saveSnippet:hover {
+    color: #5bc0de;
+  }
+  
+  #deleteSnippet {
+    color: white;
+    font-size: 19px;
+  }
+  
+  #deleteSnippet:hover {
+    color: #5bc0de;
+  }
+
 
 /* homepage with login */
 .login-bg {
@@ -88,6 +106,9 @@ h2 {
   color: white;
 }
 
+.sidebar-nav a {
+  color: #3A6EB4;
+}
 
 .indexFooter {
   position: fixed;
@@ -96,7 +117,7 @@ h2 {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #337ab7;
+  background-color: #8EA09C;
   color: white;
   text-align: center;
 }
@@ -125,7 +146,7 @@ h2 {
   }
 
 .navbar {
-  background-color: #337ab7;
+  background-color: #89C7CB;
 }
 
 .navbar-default .navbar-brand {
@@ -188,17 +209,25 @@ h2 {
   }
 }
 
+.panel-primary>.panel-heading {
+  color: #fff;
+  background-color: #F25C3E;
+  border-color: #F25C3E;
+}
+
+.panel-primary {
+  border-color: #8EA09C;
+}
+
 .huge {
   font-size: 20px;
 }
 
-.panel-green > .panel-heading {
+/* .panel-green > .panel-heading {
   border-color: #5cb85c;
   color: white;
   background-color: #5cb85c;
-}
+} */
 .member-id {
   display: none;
-}
-
 }
