@@ -34,11 +34,16 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/users", function(req, res) {
-    db.User.create(req.body).then(function(dbUser) {
-      res.json(dbUser);
-    });
-  });
+  // app.post("/api/users", function(req, res) {
+  //   console.log('WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE \n\n ');
+  //   db.User.create(req.body)
+  //   .then(function(dbUser) {
+  //     res.json(dbUser);
+  //   }).catch(function(error) {
+  //     console.log('WEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE \n\n ', error);
+  //     res.json({ error: error });
+  //   });
+  // });
 
   app.delete("/api/Users/:id", function(req, res) {
     db.User.destroy({

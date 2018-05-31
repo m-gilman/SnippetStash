@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Getting references to our form and input
-    var signUpForm = $("form.signup");
+    var signUpForm = $("form#signin-form");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
 
@@ -12,13 +12,17 @@ $(document).ready(function () {
             password: passwordInput.val().trim()
         };
     
+
+
         if (!userData.email || !userData.password) {
             return   alert("Please fill all of the fields!")
                     console.log(err);
-        // }
-        // else if(userData.email === userData.email & userData.password === userData.password){
-        //     return   alert("You can not sign up with this email and password, it is already exist, try different email again, or log in!")
         }
+
+
+        // else if(userData.email === userData.email & userData.password === userData.password){
+            // return  alert("You can not sign up with this email and password, it is already exist, try different email again, or log in!")
+        // }
         // If we have an email and password, run the signUpUser function
         signUpUser(userData.email, userData.password);
         emailInput.val("");
@@ -32,14 +36,18 @@ $(document).ready(function () {
             email: email,
             password: password
         }).then(function (data) {
-            window.location.replace(data);
+            // window.location.replace(data);
+            console.log(data);
             // If there's an error, handle it by throwing up a bootstrap alert
-        }).catch(handleLoginErr);
+        }).catch(function(error) {
+            console.log(error);
+            handleLoginErr(error);
+        });
         // alert("Please fill all of the fields!")
     }
 
     function handleLoginErr(err) {
-        $("#alert .msg").text(err.responseJSON);
+        $("#alert .msg").text(err.responseJSON.original.sqlMessage);
         $("#alert").fadeIn(500);
     }
 });
