@@ -18,15 +18,15 @@ module.exports = function (app) {
     // otherwise send back an error
     app.post("/api/signup", function (req, res) {
         console.log(req.body);
-        console.log('WOOOHOOO SIGNUP HIT \n\n\n');
+        
         db.User.create({
             email: req.body.email,
             password: req.body.password
         }).then(function (createdUser) {
-            // res.redirect(307, "/api/login");
-            res.json({ createdUser: createdUser });
+            res.redirect(307, "/api/login");
+            // res.json({ createdUser: createdUser });
         }).catch(function (err) {
-            console.log('--------------------------------\n\n\n');
+        
             console.log(err);
             res.status(409).json(err);
             // res.status(422).json(err.errors[0].message);
