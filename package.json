@@ -12,7 +12,11 @@
     "javascript",
     "node.js",
     "api",
-    "bootstrap"
+    "bootstrap",
+    "passport",
+    "codemirror",
+    "sequelize",
+    "mysql"
   ],
   "author": "pixelpushers ptsd",
   "license": "ISC",
