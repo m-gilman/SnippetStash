@@ -16,7 +16,7 @@
     "production": {
       "username": "mgl3cos1ekteh5x6",
       "password": "tkpjbnd3o38d36i5",
-      "database": "snippetStash",
+      "database": "hkmznf504ag2s51t",
       "host": "k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
       "dialect": "mysql",
       "use_env_variable": "mysql://mgl3cos1ekteh5x6:tkpjbnd3o38d36i5@k9xdebw4k3zynl4u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/hkmznf504ag2s51t"
