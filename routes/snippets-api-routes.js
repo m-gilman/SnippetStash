@@ -17,6 +17,15 @@ module.exports = function (app) {
     });
   });
 
+  //delete snippet
+  app.delete("/api/snippets/delete/:id", function(req,res){
+    db.Snippet.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+  });
+
   // Get route for returning snippets of a specific category
   app.get("/api/snippets/:CategoryId", function (req, res) {
     // Add sequelize code to find all Snippets where the category is equal to req.params.category,
@@ -31,17 +40,7 @@ module.exports = function (app) {
 
   });
 
-  // app.get("/api/snippets/:CategoryId/:Uid", function(req, res) {
-  //   // Add sequelize code to find all Snippets where the category is equal to req.params.category,
-  //   // return the result to the user with res.json
-  //   db.Snippet.findAll({where: {
-  //     CategoryId: req.params.CategoryId,
-  //     UserId:  req.params.Uid
-  //   }}).then(function (dbSnippet){
-  //     res.json(dbSnippet);
-  //   });
-
-  //should update to this:
+  //route used for member filtered view by category
   app.get("/api/user/snippets/:CategoryId/", function (req, res) {
 
     // Add sequelize code to find all Snippets where the category is equal to req.params.category,
@@ -56,6 +55,7 @@ module.exports = function (app) {
     });
   });
 
+  //route used to get member
   app.get("/api/user/", function (req, res) {
 
     // Add sequelize code to find all Snippets where the category is equal to req.params.category,
