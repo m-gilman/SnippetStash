@@ -36,13 +36,19 @@ $(document).ready(function () {
             email: email,
             password: password
         }).then(function (data) {
-            // window.location.replace(data);
+            window.location.replace(data);
             console.log(data);
             // If there's an error, handle it by throwing up a bootstrap alert
-        }).catch(function(error) {
-            console.log(error);
-            handleLoginErr(error);
-        });
+
+        // }).catch(function(error) {
+        //     console.log(error);
+        //     handleLoginErr(error);
+        // });
+
+        }).catch(handleLoginErr);
+        
+
+
         // alert("Please fill all of the fields!")
     }
 
