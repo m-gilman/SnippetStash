@@ -221,6 +221,13 @@ h2 {
   margin: 10px 15px 0 0;
 }
 
+.logoutPublic{
+  font-size: 20px;
+  color: white;
+  float: right;
+  margin: 10px 15px 0 920px;
+}
+
 .welcome {
   color: white;
   margin: 15px 0 0 20%;
