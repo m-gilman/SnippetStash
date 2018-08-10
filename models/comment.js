@@ -1,13 +1,31 @@
 module.exports = function (sequelize, DataTypes) {
-    var Comment = sequelize.define("Comment", {
-        comment: {
-            type: DataTypes.STRING
-        }
+    var comment = sequelize.define("comment", {
+        commentTitle: {
+            type: DataTypes.STRING,
+            allowNull:false,
+            validate: {
+                len: [1]
+            }
+        },
+        commentContent: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            len: [1]
+          },
     });
 
-    Comment.associate = (models) => {
-        Comment.belongsTo(models.Snippet, {foreignKey: {allowNull: false}});
-        Comment.belongsTo(models.User, {foreignKey: {allowNull: false}});
+    
+    comment.associate = function (models) {
+        comment.belongsTo(models.Snippet, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+        comment.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
     };
-    return Comment;
+    return comment;
 };

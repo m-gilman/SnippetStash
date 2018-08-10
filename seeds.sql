@@ -16,7 +16,7 @@ CREATE DATABASE snippetStash;
 -- SELECT * FROM users;
 
 
-INSERT INTO categories (catName, createdAt, updatedAt) VALUES
+INSERT INTO Categories (catName, createdAt, updatedAt) VALUES
 ('Ajax', NOW(), NOW()),
 ('CSS', NOW(), NOW()),
 ('Express', NOW(), NOW()), 
@@ -33,4 +33,4 @@ INSERT INTO categories (catName, createdAt, updatedAt) VALUES
 ('Timers',NOW(),NOW());
 
 SELECT *
-FROM categories;
+FROM Categories;

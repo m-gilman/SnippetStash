@@ -13,7 +13,8 @@ var passport = require("./config/passport");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000
+
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -35,6 +36,7 @@ require("./routes/html-routes.js")(app);
 require("./routes/categories-api-routes.js")(app);
 require("./routes/snippets-api-routes.js")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/comments-api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
@@ -43,3 +45,4 @@ db.sequelize.sync().then(function() {
   });
 });
 
+// {force updates = true}

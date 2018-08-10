@@ -5,12 +5,15 @@ $(document).ready(function () {
     var dir = window.location.pathname;
     var stashForm = $("#stash-form");
     var titleInput = $("#SnippetTitle");
+
     var contentInput = $("#snippetCode");
     var descriptionInput = $("#snippetDescription");
     var usrName = $(".member-id");
     var catId = $("#snippetCategory");
+    // var header = $("#categoryHdr");
     var header = $("#snippetHdr");
     var memberId;
+
 
     loadUserData();
     //get user data & set welcome header
@@ -73,6 +76,14 @@ $(document).ready(function () {
         });
     }
 
+    // function getCatName(id) {
+    //     $(".fa").click(function(){
+    //         $.get("/api/categories/" + id, function (data) {
+    //             header.append(data.catName + " Snippets");
+    //         });
+    //     })    
+    // }
+
     function renderSnippets(itemToAdd) {
         var newPanelHeading = $('<div class="panel ">').appendTo('#append-to-me');
         if (dir === "/public") {
@@ -87,7 +98,7 @@ $(document).ready(function () {
     $(stashForm).on("submit", function handleFormSubmit(event) {
         event.preventDefault();
         var catId = $("#snippetCategory");
-        // Wont submit the post if we are missing title, content, or username
+        // Wont submit the snippet if we are missing title, content, or username
         if (!titleInput.val().trim() || !contentInput.val().trim() || !usrName.text()) {
             console.log("Form Fields need to be completed!!!")
             console.log("Title Input: " + titleInput.val().trim());
@@ -95,7 +106,7 @@ $(document).ready(function () {
             console.log("Member ID: " + usrName.text());
             return;
         }
-        // Constructing a newPost object to hand to the database
+        // Constructing a newSnippet object to hand to the database
         var newSnippet = {
             snippetTitle: titleInput.val().trim(),
             snippetContent: contentInput.val().trim(),

@@ -1,5 +1,5 @@
 {
-  "name": "snippetstash",
+  "name": "snippetStash",
   "version": "1.0.0",
   "description": "full stack app for stashing code snippets",
   "main": "server.js",
