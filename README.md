@@ -11,7 +11,7 @@ https://snippet-stash.herokuapp.com/
 
 **Instructions**
 
-**App Setup**
+***App Setup***
 
 1. Create a repository in Github  called SnippetStash and clone this repository onto your computer. 
 
