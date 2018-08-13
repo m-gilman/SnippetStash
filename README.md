@@ -5,7 +5,7 @@ https://snippet-stash.herokuapp.com/
 
 **SnippetStash**
 -To provide a database for coders to find communal code snippets and create/save their own library of snippets for future use.
--a user can create an account and login in order to store perosal snippets of code in addition to makeing comments about their code.
+-a user can create an account and login in order to store perosal snippets of code in addition to making comments about their code.
 -if a user chooses to login onto page as a guest they may look at code that has been published on the public page
 
 
