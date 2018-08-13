@@ -79,6 +79,14 @@ h2 {
   background-color: #F25C3E;
 }
 
+#resetPswBtn, #updatePswBtn{
+  font-size: 15px;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  margin-bottom:-15px;
+  color: white;
+  background-color: #F25C3E; 
+}
+
 .btn-login:hover {
   color: white;
   background-color:	#8EA09C;
