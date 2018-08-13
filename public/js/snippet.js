@@ -139,8 +139,10 @@ $(document).ready(function () {
                                                     <div>
                                                         <br>
                                                     </div>
-                                                    <div class='well'>
-                                                        <p>Comments go here.</p>
+                                                    <div class='well' id= "commentsSaved">
+
+                                            
+                                                    <p> Comments go here </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -207,8 +209,8 @@ $(document).ready(function () {
                                                     <div>
                                                         <br>
                                                     </div>
-                                                    <div class='well'>
-                                                        <p>Comments go here.</p>
+                                                    <div class='well' id= "commentsSaved">
+                                                     <p> Comments go here. </p>                   
                                                     </div>
                                                 </div>
                                             </div>
