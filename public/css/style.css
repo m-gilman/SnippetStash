@@ -89,7 +89,7 @@ h2 {
 }
 
 
-.signUpLink {
+.signUpLink, .forgotPassworsLink {
   color: #F25C3E;
   /* text-decoration: none; */
 }

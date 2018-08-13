@@ -9,6 +9,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+      required: true,
       validate: {
         isEmail: true
       }
@@ -17,6 +18,12 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    resetPasswordToken: {
+      type: DataTypes.STRING,
+    },
+    resetPasswordExpires:{
+      type: DataTypes.DATE
     }
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
