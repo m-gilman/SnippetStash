@@ -9,16 +9,20 @@ module.exports = function (app) {
     });
   });
 
-  //get all snippets
+  //get all public snippets
   app.get("/api/snippets", function (req, res) {
     db.Snippet.findAll({
+      where: {
+        public: 1
+      }
     }).then(function (dbSnippet) {
       res.json(dbSnippet);
     });
   });
 
+
   //delete snippet
-  app.delete("/api/snippets/delete/:id", function(req,res){
+  app.delete("/api/snippets/delete/:id", function(req,res){a
     db.Snippet.destroy({
       where: {
         id: req.params.id
@@ -32,7 +36,8 @@ module.exports = function (app) {
     // return the result to the user with res.json
     db.Snippet.findAll({
       where: {
-        CategoryId: req.params.CategoryId
+        CategoryId: req.params.CategoryId,
+        public: 1
       }
     }).then(function (dbSnippet) {
       res.json(dbSnippet);

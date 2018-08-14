@@ -5,7 +5,7 @@ $(document).ready(function () {
     var dir = window.location.pathname;
     var stashForm = $("#stash-form");
     var titleInput = $("#SnippetTitle");
-
+    var publicPrivate;
     var contentInput = $("#snippetCode");
     var descriptionInput = $("#snippetDescription");
     var usrName = $(".member-id");
@@ -139,10 +139,8 @@ $(document).ready(function () {
                                                     <div>
                                                         <br>
                                                     </div>
-                                                    <div class='well' id= "commentsSaved">
-
-                                            
-                                                    <p> Comments go here </p>
+                                                    <div class='well'>
+                                                        <p>Comments go here.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -209,8 +207,8 @@ $(document).ready(function () {
                                                     <div>
                                                         <br>
                                                     </div>
-                                                    <div class='well' id= "commentsSaved">
-                                                     <p> Comments go here. </p>                   
+                                                    <div class='well'>
+                                                        <p>Comments go here.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -230,6 +228,9 @@ $(document).ready(function () {
     $(stashForm).on("submit", function handleFormSubmit(event) {
         event.preventDefault();
         var catId = $("#snippetCategory");
+        if ($('#public').is(':checked')) {
+            publicPrivate = true;
+        }else {publicPrivate = false;}
         // Wont submit the snippet if we are missing title, content, or username
         if (!titleInput.val().trim() || !contentInput.val().trim() || !usrName.text()) {
             console.log("Form Fields need to be completed!!!")
@@ -243,6 +244,7 @@ $(document).ready(function () {
             snippetTitle: titleInput.val().trim(),
             snippetContent: contentInput.val().trim(),
             snippetDescription: descriptionInput.val().trim(),
+            public: publicPrivate,
             CategoryId: catId.val(),
             UserId: usrName.text()
         };
@@ -251,6 +253,7 @@ $(document).ready(function () {
     });
 
     function insertSnippet(newSnippet) {
+        console.log(publicPrivate);
         var cid = newSnippet.CategoryId;
         var mid = newSnippet.UserId;
         $.post("/api/snippets", newSnippet, function () {
