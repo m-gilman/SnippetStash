@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+var User = require("../models/user");
 
 var async = require("async");
 var nodemailer = require("nodemailer");
@@ -61,11 +62,12 @@ module.exports = function (app) {
 
 
     // forgot password
-app.get('/forgot', function(req, res) {
-    res.render('forgot');
+app.get('/api/forgot', function(req, res) {
+    // res.render('forgot');
+    res.json('/forgot');
   });
   
-  app.post('/forgot', function(req, res, next) {
+  app.post('/api/forgot', function(req, res, next) {
     async.waterfall([
       function(done) {
         crypto.randomBytes(20, function(err, buf) {
@@ -74,7 +76,7 @@ app.get('/forgot', function(req, res) {
         });
       },
       function(token, done) {
-        User.findOne({ email: req.body.email }, function(err, user) {
+        db.User.findOne({ email: req.body.email }, function(err, user) {
           if (!user) {
             req.flash('error', 'No account with that email address exists.');
             return res.redirect('/forgot');

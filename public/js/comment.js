@@ -1,7 +1,6 @@
 $(document).ready(function () {
     var url = window.location.search;
     var dir = window.location.pathname; 
-    // var commentTitle = $("#CommentTitle")
     var comUserName = $('#UserComName')
     var commentText = $("#CommentText")
     var commentForm = $("#comment-form")
