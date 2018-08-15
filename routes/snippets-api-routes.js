@@ -22,7 +22,7 @@ module.exports = function (app) {
 
 
   //delete snippet
-  app.delete("/api/snippets/delete/:id", function(req,res){a
+  app.delete("/api/snippets/delete/:id", function(req,res){
     db.Snippet.destroy({
       where: {
         id: req.params.id
