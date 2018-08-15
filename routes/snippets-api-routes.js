@@ -20,9 +20,21 @@ module.exports = function (app) {
     });
   });
 
+  //return all PUBLIC snippets based on search criteria
+  app.get("/api/find/public/snippets/:param", function (req, res) {
+    db.Snippet.findAll({
+      where: {
+        snippetTitle: { $like: '%' + req.params.param + '%' },
+        public: 1
+      }
+    }).then(function (dbSnippet) {
+      res.json(dbSnippet);
+    });
+  });
+
 
   //delete snippet
-  app.delete("/api/snippets/delete/:id", function(req,res){
+  app.delete("/api/snippets/delete/:id", function (req, res) {
     db.Snippet.destroy({
       where: {
         id: req.params.id
