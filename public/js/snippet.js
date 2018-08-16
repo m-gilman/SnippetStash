@@ -10,6 +10,7 @@ $(document).ready(function () {
     var descriptionInput = $("#snippetDescription");
     var usrName = $(".member-id");
     var catId = $("#snippetCategory");
+    var snippetArea = $('.snippet-list');
     // var header = $("#categoryHdr");
     var header = $("#snippetHdr");
     var memberId;
@@ -119,8 +120,12 @@ $(document).ready(function () {
                                             <div id='collapse${itemToAdd.id}' class='panel-collapse collapse'>
                                                 <div class='panel-body'>
                                                     <div class='well'>
-                                                        <textarea class='form-control' rows='11'>${itemToAdd.snippetContent}</textarea>
-                                                        <button>Copy to Clipboard </button
+                                                        <textarea class='form-control' id='copy${itemToAdd.id}' rows='11'>${itemToAdd.snippetContent}</textarea>
+                                                        
+                                                        <button class="copy-btn" data-clipboard-target="#copy${itemToAdd.id}" data-toggle="tooltip" data-placement="bottom">
+                                                                <img src="../images/clippy.svg" alt="Copy to Clipboard">
+                                                        </button>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -187,8 +192,13 @@ $(document).ready(function () {
                                             <div id='collapse${itemToAdd.id}' class='panel-collapse collapse'>
                                                 <div class='panel-body'>
                                                     <div class='well'>
-                                                        <textarea class='form-control' rows='11'>${itemToAdd.snippetContent}</textarea>
-                                                        <button>Copy to Clipboard </button
+                                                        
+                                                        <textarea class='form-control' id='copy${itemToAdd.id}' rows='11'>${itemToAdd.snippetContent}</textarea>
+                                                        
+                                                        <button class="copy-btn" data-clipboard-target="#copy${itemToAdd.id}" data-toggle="tooltip" data-placement="bottom">
+                                                            <img src="../images/clippy.svg" alt="Copy to Clipboard">
+                                                        </button>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -224,13 +234,49 @@ $(document).ready(function () {
         }
     }
 
+    // tooltips don't work :-(
+
+    // var tooltip = $('[data-toggle="tooltip"]')
+    // tooltip.toArray().forEach(function (element) {
+    //     $(element).tooltip({
+    //         title: "Copy to Clipboard",
+    //         delay: {
+    //             "show": 500,
+    //             "hide": 500
+    //         }
+    //     });
+    // });
+
+    
+
+    snippetArea.on('click', 'button', function () {
+        var clipboard = new ClipboardJS('.copy-btn', {
+            target: function (trigger) {
+                return trigger.previousElementSibling;
+            }
+        });   
+         
+        // console.log("BUTTON CLICKED!");
+        
+        // var tooltip = $('[data-toggle="tooltip"]')
+        // tooltip.toArray().forEach(function (element) {
+        //     $(element).tooltip({
+        //         title: "Copied!",
+        //         delay: {
+        //             "show": 100,
+        //             "hide": 500
+        //         }
+        //     });
+        // }); 
+    });
+
     //form submission
     $(stashForm).on("submit", function handleFormSubmit(event) {
         event.preventDefault();
         var catId = $("#snippetCategory");
         if ($('#public').is(':checked')) {
             publicPrivate = true;
-        }else {publicPrivate = false;}
+        } else { publicPrivate = false; }
         // Wont submit the snippet if we are missing title, content, or username
         if (!titleInput.val().trim() || !contentInput.val().trim() || !usrName.text()) {
             console.log("Form Fields need to be completed!!!")
