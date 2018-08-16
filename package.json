@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "async": "^2.6.1",
+    "clipboard": "^2.0.1",
     "crypto": "^1.0.1",
     "nodemailer": "^4.6.7"
   }
