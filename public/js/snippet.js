@@ -256,18 +256,18 @@ $(document).ready(function () {
             }
         });   
          
-        // console.log("BUTTON CLICKED!");
+        console.log("BUTTON CLICKED!");
         
-        // var tooltip = $('[data-toggle="tooltip"]')
-        // tooltip.toArray().forEach(function (element) {
-        //     $(element).tooltip({
-        //         title: "Copied!",
-        //         delay: {
-        //             "show": 100,
-        //             "hide": 500
-        //         }
-        //     });
-        // }); 
+        var tooltip = $('[data-toggle="tooltip"]')
+        tooltip.toArray().forEach(function (element) {
+            $(element).tooltip({
+                title: "Copied!",
+                delay: {
+                    "show": 100,
+                    "hide": 500
+                }
+            });
+        }); 
     });
 
     //form submission
