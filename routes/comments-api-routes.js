@@ -4,8 +4,10 @@ module.exports = function (app) {
 
   //create new comment
   app.post("/api/comments", function (req, res) {
+    console.log(req.body);
     db.Comment.create(req.body).then(function (dbComment) {
       res.json(dbComment);
+      
     });
   });
 

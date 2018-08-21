@@ -144,7 +144,7 @@ $(document).ready(function () {
                                                     <div>
                                                         <br>
                                                     </div>
-                                                    <div class='well'>
+                                                    <div id ="commentsSaved" class='well'>
                                                         <p>Comments go here.</p>
                                                     </div>
                                                 </div>
@@ -217,7 +217,7 @@ $(document).ready(function () {
                                                     <div>
                                                         <br>
                                                     </div>
-                                                    <div class='well'>
+                                                    <div id ="commentsSaved" class='well'>
                                                         <p>Comments go here.</p>
                                                     </div>
                                                 </div>
