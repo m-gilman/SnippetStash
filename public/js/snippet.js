@@ -71,6 +71,27 @@ $(document).ready(function () {
         });
     }
 
+    function getAllSnippetsByQuery(qparam) {
+        $('#append-to-me').empty();
+        var queryURL;
+        if (dir === "/public") {
+            queryURL = "/api/find/public/snippets/";
+        } else {
+            queryURL = "/api/find/member/snippets/";
+        }
+
+        $.get(queryURL + qparam, function (data) {
+            var itemToAdd = [];
+            for (var i = 0; i < data.length; i++) {
+                itemToAdd.push(renderSnippets(data[i]));
+            }
+
+            header.text("Snippets search results");
+        });
+
+    }
+
+
     function getCatName(id) {
         $.get("/api/categories/" + id, function (data) {
             header.append(data.catName + " Snippets");
@@ -247,17 +268,17 @@ $(document).ready(function () {
     //     });
     // });
 
-    
+
 
     snippetArea.on('click', 'button', function () {
         var clipboard = new ClipboardJS('.copy-btn', {
             target: function (trigger) {
                 return trigger.previousElementSibling;
             }
-        });   
-         
+        });
+
         console.log("BUTTON CLICKED!");
-        
+
         var tooltip = $('[data-toggle="tooltip"]')
         tooltip.toArray().forEach(function (element) {
             $(element).tooltip({
@@ -267,7 +288,7 @@ $(document).ready(function () {
                     "hide": 500
                 }
             });
-        }); 
+        });
     });
 
     //form submission
@@ -325,5 +346,23 @@ $(document).ready(function () {
             url: "/api/snippets/delete/" + id
         }).then(location.reload());
     }
+
+    //snippet search
+    //1st code block handles an enter click event on the search text box
+    $('#searchBox').bind('keyup', function (e) {
+        if (e.keyCode === 13) { // 13 is enter key    
+            var searchParam = $("#searchBox").val().trim();
+            getAllSnippetsByQuery(searchParam);
+        }
+    });
+    $(document).on("click", ".btn-default", handleSnippetSearch);
+    function handleSnippetSearch() {
+        event.preventDefault();
+        var searchParam = $("#searchBox").val().trim();
+        getAllSnippetsByQuery(searchParam);
+        // alert(searchParam);
+    }
+
+
 });//end document.ready function
 

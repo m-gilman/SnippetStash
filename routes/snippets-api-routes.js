@@ -72,6 +72,20 @@ module.exports = function (app) {
     });
   });
 
+
+  //return all MEMBER specific snippets based on search criteria
+  app.get("/api/find/member/snippets/:param", function (req, res) {
+    db.Snippet.findAll({
+      where: {
+        snippetTitle: { $like: '%' + req.params.param + '%' },
+        UserId: req.user.id
+      }
+    }).then(function (dbSnippet) {
+      res.json(dbSnippet);
+    });
+  });
+
+
   //route used to get member
   app.get("/api/user/", function (req, res) {
 
