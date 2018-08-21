@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var comment = sequelize.define("comment", {
+    var Comment = sequelize.define("Comment", {
         commentUserName: {
             type: DataTypes.STRING,
             allowNull:false,
@@ -15,17 +15,17 @@ module.exports = function (sequelize, DataTypes) {
     });
 
     
-    comment.associate = function (models) {
-        comment.belongsTo(models.Snippet, {
+    Comment.associate = function (models) {
+        Comment.belongsTo(models.Snippet, {
             foreignKey: {
                 allowNull: false
             }
         });
-        comment.belongsTo(models.User, {
+        Comment.belongsTo(models.User, {
             foreignKey: {
                 allowNull: false
             }
         });
     };
-    return comment;
+    return Comment;
 };

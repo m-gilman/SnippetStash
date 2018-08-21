@@ -1,3 +1,4 @@
+var globalUser;
 $(document).ready(function () {
     var dir = window.location.pathname;
     var uid;
@@ -9,6 +10,7 @@ $(document).ready(function () {
     function getUser() {
         $.get("/api/user", function (data) {
             var userId = data.UserId;
+            globalUser = data.UserId;
             uid = userId
         });
     };

@@ -82,6 +82,7 @@ module.exports = function (app) {
         UserId: req.user.id
       }
     }).then(function (dbSnippet) {
+      console.log(dbSnippet);
       res.json(dbSnippet);
     });
   });
