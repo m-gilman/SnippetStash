@@ -24,7 +24,8 @@ module.exports = function (app) {
   app.get("/api/find/public/snippets/:param", function (req, res) {
     db.Snippet.findAll({
       where: {
-        snippetTitle: { $like: '%' + req.params.param + '%' },
+        $or: {snippetTitle: { $like: '%' + req.params.param + '%' },
+              snippetDescription: { $like: '%' + req.params.param + '%' }},
         public: 1
       }
     }).then(function (dbSnippet) {
@@ -77,7 +78,8 @@ module.exports = function (app) {
   app.get("/api/find/member/snippets/:param", function (req, res) {
     db.Snippet.findAll({
       where: {
-        snippetTitle: { $like: '%' + req.params.param + '%' },
+        $or: {snippetTitle: { $like: '%' + req.params.param + '%' },
+              snippetDescription: { $like: '%' + req.params.param + '%' }},
         UserId: req.user.id
       }
     }).then(function (dbSnippet) {
