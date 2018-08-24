@@ -7,7 +7,6 @@ $(document).ready(function () {
     var savedComments = $("#commentsSaved")
     var usrName = $(".member-id");
     var userEmail;
-    // var userId;
     var memberId;
 
     var catId = $("#snippetCategory");
@@ -16,35 +15,34 @@ $(document).ready(function () {
     $.get("/api/user_data").then(function (data) {
         console.log(data);
         userEmail = data.email;
-        // userId = data.id;
         memberId = data.id;
         comUserName.text(userEmail);
     });
 
 
-    //pass member id it use it to return comments
-    function getMember(uid) {
-        memberId = uid;
-        if (url.indexOf("?userId=") !== -1) {
-            userId = url.split("=")[1];
-            if (dir === "/public") {
-                getAllCommentsByUser(userId);
-            } else {
-                getMemberCommentsBySnippetId(userId);
-            }
+    // //pass member id it use it to return comments
+    // function getMember(uid) {
+    //     memberId = uid;
+    //     if (url.indexOf("?userId=") !== -1) {
+    //         userId = url.split("=")[1];
+    //         if (dir === "/public") {
+    //             getAllCommentsByUser(userId);
+    //         } else {
+    //             getMemberCommentsBySnippetId(userId);
+    //         }
 
-        }
-        else {
-            //displays first category snippets as default view
-            userId = 1;
-            if (dir === "/public") {
-                getAllCommentsByUser(userId);
-            } else {
-                getMemberCommentsBySnippetId(userId);
-            }
-        }
+    //     }
+    //     else {
+    //         //displays first category snippets as default view
+    //         userId = 1;
+    //         if (dir === "/public") {
+    //             getAllCommentsByUser(userId);
+    //         } else {
+    //             getMemberCommentsBySnippetId(userId);
+    //         }
+    //     }
 
-    }
+    // }
 
     function getAllCommentsByUser(id) {
         $.get("/api/comments/" + id, function (data) {

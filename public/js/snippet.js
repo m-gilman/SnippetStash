@@ -13,7 +13,6 @@ $(document).ready(function () {
     var snippetArea = $('.snippet-list');
     // var header = $("#categoryHdr");
     var header = $("#snippetHdr");
-    var memberId;
 
 
     loadUserData();
@@ -27,6 +26,7 @@ $(document).ready(function () {
         });
     }
 
+    
     //pass member id it use it to return snippets
     function getMember(uid) {
         memberId = uid;
