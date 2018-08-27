@@ -1,6 +1,6 @@
 # SnippetStash
-A code snippet and boilerplate library for new coders
 
+A code snippet and boilerplate library for new coders
 https://snippet-stash.herokuapp.com/
 
 **SnippetStash**
@@ -8,9 +8,9 @@ https://snippet-stash.herokuapp.com/
 -a user can create an account and login in order to store perosal snippets of code in addition to making comments about their code.
 -if a user chooses to login onto page as a guest they may look at code that has been published on the public page
 
-**Instructions**
+##Instructions
 
-***App Setup***
+**App Setup**
 
 1. Create a repository in Github  called SnippetStash and clone this repository onto your computer. 
 
