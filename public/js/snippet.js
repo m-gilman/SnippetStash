@@ -26,7 +26,7 @@ $(document).ready(function () {
         });
     }
 
-    
+
     //pass member id it use it to return snippets
     function getMember(uid) {
         memberId = uid;
@@ -118,7 +118,7 @@ $(document).ready(function () {
                                 <div class='row'>
                                     <div class='col-xs-3'>
                                         <a href='' type='small-link' aria-label='Left Align'>
-                                            <span class='glyphicon glyphicon-scissors' id='copySnippet'aria-hidden='true'></span>
+                                            <span class='snip-it glyphicon glyphicon-scissors' id='${itemToAdd.id}' aria-hidden='true'></span>
                                         </a>
                                     </div>
                                     <div class='col-xs-9 text-right'>
@@ -277,8 +277,6 @@ $(document).ready(function () {
             }
         });
 
-        console.log("BUTTON CLICKED!");
-
         var tooltip = $('[data-toggle="tooltip"]')
         tooltip.toArray().forEach(function (element) {
             $(element).tooltip({
@@ -327,6 +325,23 @@ $(document).ready(function () {
             window.location.href = dir + "?catId=" + cid + "&userId=" + mid;
         });
     };
+
+    //snippet save to personal - 
+    $(document).on("click", ".snip-it", handleSnippetSave);
+    function handleSnippetSave() {
+        event.preventDefault();
+        var curSnippet = $(this).attr('id');
+        var member = $(".member-id");
+        // console.log(curSnippet);
+        saveSnippet(curSnippet);
+    }
+
+    // This function does an API call to add snippets to personal stash
+    function saveSnippet(snippetID) {
+        // alert("curSnippet: " + snippetID);
+        console.log ('SNIPPET SAVED :' + snippetID)
+    }
+
 
     //snippet deletion
     $(document).on("click", ".glyphicon-trash", handleSnippetDelete);
