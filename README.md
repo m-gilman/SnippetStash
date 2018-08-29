@@ -1,7 +1,7 @@
 # SnippetStash
 
 A code snippet and boilerplate library for new coders
-https://snippet-stash.herokuapp.com/
+https://snippetstash-v3.herokuapp.com/
 
 **SnippetStash**
 -To provide a database for coders to find communal code snippets and create/save their own library of snippets for future use.
