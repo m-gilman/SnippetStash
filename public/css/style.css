@@ -1,6 +1,14 @@
+:root {
+  --color1: #003b55;
+  --color2: #d3ebd5;  
+  --color3: #80bfb7;
+  --color4: #0b87a1;
+  --color5: #363946;
+}
 
 html .homePageBody {
-  background: url('../images/bg1.png'); 
+  /* background: url('../images/bg1.png');  */
+  background: var(--color1);
 }
 
 .login-box {
@@ -9,8 +17,7 @@ html .homePageBody {
   padding: 58px 76px 0 76px;
   color: #ebebeb;
   font: 12px Arial, Helvetica, sans-serif;
-  background: url('../images/bg.png') no-repeat left top;
-
+  /* background: url('../images/bg.png') no-repeat left top; */
 }
 
 
@@ -35,23 +42,23 @@ html .homePageBody {
 
 /* homepage with login */
 .login-bg {
-  background: url('../images/bg1.png'); 
+  /* background: url('../images/bg1.png');  */
+  background: #003b55;
   width: 100%; 
   height: 100%;
   }
 
 .title{
   text-align: center;
-  color: white;
-  background: rgba(137, 199, 203, 0.75);
-  padding: 10px 20px;
+  /* background: var(--color3); */
+  padding: 10px 22px 10px 18px;
   margin-top: 2vh;
-  border: solid 10px #F25C3E;
-  
+  /* border: solid 10px var(--color3); */
+  border-radius: 10px;
 }
 
 .title h1 {
-  color: #363946;
+  color: #fff;
   font-size: 40px;
   font-family: 'Lobster Two', cursive;
 }
@@ -68,7 +75,7 @@ h2 {
   padding: 0 30px;
   margin: 5vh -5px;
   background: rgba(137, 199, 203, 0.75);
-  border: solid 10px #F25C3E;
+  /* border: solid 10px var(--color2); */
 }
 
 .btn-login {
@@ -76,15 +83,9 @@ h2 {
   font-family: 'Arial Narrow Bold', sans-serif;
   margin-bottom:-15px;
   color: white;
-  background-color: #F25C3E;
-}
+  background-color: var(--color1);
+  border: 2px solid var(--color2);
 
-#resetPswBtn, #updatePswBtn{
-  font-size: 15px;
-  font-family: 'Arial Narrow Bold', sans-serif;
-  margin-bottom:-15px;
-  color: white;
-  background-color: #F25C3E; 
 }
 
 .btn-login:hover {
@@ -93,12 +94,19 @@ h2 {
 }
 
 .btn-login:focus{
-  color: white;
+  /* color: white; */
 }
 
+#resetPswBtn, #updatePswBtn{
+  font-size: 15px;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  margin-bottom:-15px;
+  color: white;
+  background-color: var(--color1); 
+}
 
 .signUpLink, .forgotPasswordLink {
-  color: #F25C3E;
+  color: var(--color2);
   /* text-decoration: none; */
 }
 
