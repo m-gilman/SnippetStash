@@ -103,74 +103,72 @@ $(document).ready(function () {
         if (dir === "/public") {
             newPanelHeading.append(`
             <div class='col-lg-11 col-lg-12'>
-                <div class='panel-group' id='accordion${itemToAdd.id}'>
-                    <div class='panel'>
-                        <div class='panel panel-primary'>
-                            <div class='panel-heading'>
-                                <div class='row'>
-                                    <div class='col-xs-9 '>
-                                        <div class='huge'>${itemToAdd.snippetTitle}</div>
-                                        <div>${itemToAdd.snippetDescription}</div>
+            <div class='panel-group' id='accordion${itemToAdd.id}'>
+                <div class='panel'>
+                    <div class='panel panel-primary'>
+                        <div class='panel-heading'>
+                            <div class='row'>
+                                <div class='col-xs-9 '>
+                                    <div class='huge'>${itemToAdd.snippetTitle}
                                     </div>
-                                
-                                    <div class='col-xs-3 text-right'>
+                                    <div>${itemToAdd.snippetDescription}
+                                    </div>
+                                </div>
+                                <div class='col-xs-3 text-right'>
                                     <button class='snip-btn'>
                                         <i class="fas fa-cut snip-it" id='${itemToAdd.id}' title="Snip-it to add to your library"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                            <a href='#'>
-                                <div class='snippetDetails'>
-                                    <div class='panel-group' id='accordion${itemToAdd.id}'>
-                                        <div class='panel panel-info'>
-                                            <div class='panel-heading'>
-                                                <h4 class='panel-title'>
-                                                    <a data-toggle='collapse' data-parent='#accordion${itemToAdd.id}' href='#collapse${itemToAdd.id}'>
-                                                        <span class='glyphicon glyphicon-plus'></span>View Details
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id='collapse${itemToAdd.id}' class='panel-collapse collapse'>
-                                                <div class='panel-body'>
-                                                    <div class='well'>
-                                                        <textarea class='form-control' id='copy${itemToAdd.id}' rows='11'>${itemToAdd.snippetContent}</textarea>
-                                                        
-                                                        <button class="copy-btn" data-clipboard-target="#copy${itemToAdd.id}" data-toggle="tooltip" data-placement="bottom">
-                                                                <img src="../images/clippy.svg" alt="Copy to Clipboard">
-                                                        </button>
-                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class='panel panel-info'>
-                                            <div class='panel-heading'>
-                                                <h4 class='panel-title'>
-                                                    <a data-toggle='collapse' data-parent='#accordion${itemToAdd.id}' href='#collapseTwo${itemToAdd.id}'>
-                                                        <span class='glyphicon glyphicon-plus'></span>Comments
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id='collapseTwo${itemToAdd.id}' class='panel-collapse collapse'>
-                                                <div class='panel-body'>
-                                                    <a href='#' class='btn btn-success' data-toggle='modal' data-target='#commentModal'>Add a Comment</a>
-                                                    <div>
-                                                        <br>
-                                                    </div>
-                                                    <div id ="commentsSaved" class='well'>
-                                                        <p>Comments go here.</p>
-                                                    </div>
-                                                </div>
+                        <div class='snippetDetails'>
+                            <div class='panel-group' id='accordion${itemToAdd.id}'>
+                                <div class='panel panel-info'>
+                                    <div class='panel-heading'>
+                                        <h4 class='panel-title'>
+                                            <a data-toggle='collapse' data-parent='#accordion${itemToAdd.id}' href='#collapse${itemToAdd.id}'>
+                                                <span class='glyphicon glyphicon-plus'></span>View Details
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id='collapse${itemToAdd.id}' class='panel-collapse collapse'>
+                                        <div class='panel-body'>
+                                            <div class='well'>
+                                                <textarea class='form-control' id='copy${itemToAdd.id}' rows='11'>${itemToAdd.snippetContent}</textarea>
+                                                <button class="copy-btn" data-clipboard-target="#copy${itemToAdd.id}" data-toggle="tooltip" data-placement="bottom">
+                                                    <img src="../images/clippy.svg" alt="Copy to Clipboard">
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                                <div class='panel panel-info'>
+                                    <div class='panel-heading'>
+                                        <h4 class='panel-title'>
+                                            <a data-toggle='collapse' data-parent='#accordion${itemToAdd.id}' href='#collapseTwo${itemToAdd.id}'>
+                                                <span class='glyphicon glyphicon-plus'></span>Comments
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id='collapseTwo${itemToAdd.id}' class='panel-collapse collapse'>
+                                        <div class='panel-body'>
+                                            <a href='#' class='btn btn-success' data-toggle='modal' data-target='#commentModal'>Add
+                                                a Comment</a>
+                                            <div>
+                                                <br>
+                                            </div>
+                                            <div id="commentsSaved" class='well'>
+                                                <p>Comments go here.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
             `);
         } else {
 
@@ -181,65 +179,63 @@ $(document).ready(function () {
                         <div class='panel panel-primary'>
                             <div class='panel-heading'>
                                 <div class='row'>
-                                    <div class='col-xs-3'>
-                                        <a href='' type='small-link' aria-label='Left Align'>
-                                            <span class='glyphicon glyphicon-trash' id='${itemToAdd.id}'aria-hidden='true'></span>
-                                        </a>
+                                    <div class='col-xs-9'>
+                                        <div class='huge'>${itemToAdd.snippetTitle}
+                                        </div>
+                                        <div>${itemToAdd.snippetDescription}
+                                        </div>
                                     </div>
-                                    <div class='col-xs-9 text-right'>
-                                        <div class='huge'>${itemToAdd.snippetTitle}</div>
-                                        <div>${itemToAdd.snippetDescription}</div>
+                                    <div class='col-xs-3 text-right'>
+                                        <button class='snip-btn'>
+                                            <i class="trash-it fas fa-trash-alt" id='${itemToAdd.id}' title='Delete this snippet'></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                            <a href='#'>
-                                <div class='snippetDetails'>
-                                    <div class='panel-group' id='accordion${itemToAdd.id}'>
-                                        <div class='panel panel-info'>
-                                            <div class='panel-heading'>
-                                                <h4 class='panel-title'>
-                                                    <a data-toggle='collapse' data-parent='#accordion${itemToAdd.id}' href='#collapse${itemToAdd.id}'>
-                                                        <span class='glyphicon glyphicon-plus'></span>View Details
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id='collapse${itemToAdd.id}' class='panel-collapse collapse'>
-                                                <div class='panel-body'>
-                                                    <div class='well'>
-                                                        
-                                                        <textarea class='form-control' id='copy${itemToAdd.id}' rows='11'>${itemToAdd.snippetContent}</textarea>
-                                                        
-                                                        <button class="copy-btn" data-clipboard-target="#copy${itemToAdd.id}" data-toggle="tooltip" data-placement="bottom">
-                                                            <img src="../images/clippy.svg" alt="Copy to Clipboard">
-                                                        </button>
-
-                                                    </div>
+                            <div class='snippetDetails'>
+                                <div class='panel-group' id='accordion${itemToAdd.id}'>
+                                    <div class='panel panel-info'>
+                                        <div class='panel-heading'>
+                                            <h4 class='panel-title'>
+                                                <a data-toggle='collapse' data-parent='#accordion${itemToAdd.id}' href='#collapse${itemToAdd.id}'>
+                                                    <span class='glyphicon glyphicon-plus'></span>View Details
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id='collapse${itemToAdd.id}' class='panel-collapse collapse'>
+                                            <div class='panel-body'>
+                                                <div class='well'>
+                                                    <textarea class='form-control' id='copy${itemToAdd.id}' rows='11'>${itemToAdd.snippetContent}</textarea>
+                                                    <button class="copy-btn" data-clipboard-target="#copy${itemToAdd.id}" data-toggle="tooltip" data-placement="bottom">
+                                                        <img src="../images/clippy.svg" alt="Copy to Clipboard">
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class='panel panel-info'>
-                                            <div class='panel-heading'>
-                                                <h4 class='panel-title'>
-                                                    <a data-toggle='collapse' data-parent='#accordion${itemToAdd.id}' href='#collapseTwo${itemToAdd.id}'>
-                                                        <span class='glyphicon glyphicon-plus'></span>Comments
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id='collapseTwo${itemToAdd.id}' class='panel-collapse collapse'>
-                                                <div class='panel-body'>
-                                                    <a href='#' class='btn btn-success' data-toggle='modal' data-target='#commentModal'>Add a Comment</a>
-                                                    <div>
-                                                        <br>
-                                                    </div>
-                                                    <div id ="commentsSaved" class='well'>
-                                                        <p>Comments go here.</p>
-                                                    </div>
+                                    </div>
+                                    <div class='panel panel-info'>
+                                        <div class='panel-heading'>
+                                            <h4 class='panel-title'>
+                                                <a data-toggle='collapse' data-parent='#accordion${itemToAdd.id}' href='#collapseTwo${itemToAdd.id}'>
+                                                    <span class='glyphicon glyphicon-plus'></span>Comments
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id='collapseTwo${itemToAdd.id}' class='panel-collapse collapse'>
+                                            <div class='panel-body'>
+                                                <a href='#' class='btn btn-success' data-toggle='modal' data-target='#commentModal'>Add
+                                                    a Comment</a>
+                                                <div>
+                                                    <br>
+                                                </div>
+                                                <div id="commentsSaved" class='well'>
+                                                    <p>Comments go here.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,8 +243,6 @@ $(document).ready(function () {
             `);
         }
     }
-
-    // tooltips don't work :-(
 
     // var tooltip = $('[data-toggle="tooltip"]')
     // tooltip.toArray().forEach(function (element) {
@@ -263,7 +257,7 @@ $(document).ready(function () {
 
 
 
-    snippetArea.on('click', 'button', function () {
+    snippetArea.on('click', '.copy-btn', function () {
         var clipboard = new ClipboardJS('.copy-btn', {
             target: function (trigger) {
                 return trigger.previousElementSibling;
@@ -276,7 +270,7 @@ $(document).ready(function () {
                 title: "Copied!",
                 delay: {
                     "show": 100,
-                    "hide": 500
+                    "hide": 3000
                 }
             });
         });
@@ -337,7 +331,7 @@ $(document).ready(function () {
 
 
     //snippet deletion
-    $(document).on("click", ".glyphicon-trash", handleSnippetDelete);
+    $(document).on("click", ".trash-it", handleSnippetDelete);
     function handleSnippetDelete() {
         event.preventDefault();
         var curSnippet = $(this).attr('id');
