@@ -116,6 +116,15 @@ h2 {
   color: white;
 }
 
+.snip-btn {
+  background: var(--color3);
+  color: var(--color1);
+  line-height: 25px;
+  /* width: 36px; */
+  margin-top: 5px;
+  font-size: 16px;
+}
+
 .sidebar-nav a {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #3A6EB4;
@@ -222,8 +231,8 @@ h2 {
 
 .panel-primary>.panel-heading {
   color: #fff;
-  background-color: #F25C3E;
-  border-color: #F25C3E;
+  background-color: var(--color1);
+  /* border-color: var(--color1); */
 }
 
 .panel-primary {
